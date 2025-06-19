@@ -1,0 +1,153 @@
+🏗️ Replit v2 Agent Prompt 
+
+Project Name: 
+
+yaya! — Construction Labor Matching System 
+
+ 
+
+🌟 Goal: 
+
+Build a hackathon prototype of a real-time construction job matching MVP that connects contractors to skilled workers using Africa’s Talking USSD and SMS APIs. 
+
+⚠️ This is a lean prototype — focus on core functionalities, not a fully-fledged product. 
+
+🎨 Prototype should have simple but appealing aesthetics — construction theme, icons, and relevant background image. 
+
+ 
+
+📂 Category: 
+
+Workforce Management 
+
+🛠️ Tech Stack Preference: 
+
+Frontend: Minimalist React app (if needed) 
+
+Backend: Simple and effective logic for matching and SMS dispatch 
+
+Priority: USSD/SMS backend logic and Africa's Talking integration 
+
+ 
+
+🛏️ Problem: 
+
+Contractors often can’t find skilled laborers in time. 
+
+ Workers miss job opportunities due to limited access to smartphones, internet, or airtime. 
+
+ 
+
+✅ Solution: 
+
+A lightweight USSD-based system that: 
+
+Lets contractors post jobs via mobile USSD or web 
+
+Lets workers register via USSD with skills and location 
+
+Matches workers to jobs in real time based on skill + location 
+
+Sends SMS notifications to selected workers 
+
+ 
+
+💡 MVP Plan 
+
+1. Contractor Job Posting 
+
+Interface: Mobile USSD or web form 
+
+Inputs: Skill needed, location (use real Kenyan locations e.g. Pipeline, Gikambura) 
+
+Action: Save job post to DB 
+
+API: Africa’s Talking USSD 
+
+2. Worker Registration 
+
+Interface: USSD 
+
+Inputs: Name, skill type (e.g. Mason), location 
+
+Action: Save to DB 
+
+API: Africa’s Talking USSD 
+
+3. Matching Logic 
+
+On job post, fetch workers who match skill + location 
+
+Select top 2-3 workers 
+
+4. SMS Notifications 
+
+Message: "Job: Mason needed in Pipeline. Call 07xx..." 
+
+API: Africa’s Talking SMS 
+
+5. (Optional) Worker Response 
+
+Worker can reply via SMS or call contractor directly 
+
+ 
+
+🧪 Demo Flow 
+
+Worker dials *123# 
+
+Registers: name, skill = Mason, location = Pipeline 
+
+Contractor posts: “Need mason in Pipeline” 
+
+System fetches 2 matches 
+
+SMS sent to workers with job + contractor number 
+
+Worker calls contractor → connection made 
+
+ 
+
+⚙️ Technologies 
+
+Africa’s Talking APIs 
+
+USSD: to receive input from contractors and workers 
+
+SMS: to notify matched workers 
+
+Backend: 
+
+Express.js / Node.js  
+
+Frontend (optional): 
+
+Minimal React App 
+
+Construction-themed styling (icons, background image) 
+
+Hosting: 
+
+Replit backend  
+
+ 
+
+🔐 Credentials (replace placeholders): 
+
+AFRICASTALKING_USERNAME=your_username_here   
+AFRICASTALKING_API_KEY=your_api_key_here 
+  
+
+ 
+
+🧪 Output Required: 
+
+A working demo of the MVP that: 
+
+Provides test endpoints for USSD + SMS flows via Africa’s Talking 
+
+Demonstrates job creation, worker registration, matching, and SMS notifications 
+
+Has simple UI with construction theme (if frontend used) 
+
+Shape 
